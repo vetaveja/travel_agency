@@ -42,7 +42,9 @@ body {
 
 .header {
 	height: 100vh;
-	background-repeat: no-repeat;
+	min-width: 100%;
+	background-size: cover;
+	background: #333;
 	position: relative;
 	&__title {
 		margin: 0 auto;
@@ -189,13 +191,14 @@ body {
 }
 
 .section{
+	min-width: 100%;
 	background-size: cover;
 	&__title {
 		font: 36px/1.4 'Aleo', Arial, sans-serif;
 		margin: 0;
 		padding: 205px 0 40px;
 		&--mid {
-
+			padding: 125px 370px 100px;
 		}
 	}
 	&__text {
@@ -231,6 +234,14 @@ body {
 		&--mid {
 			right: 125px;
 			top: 120px;
+
+		}
+		&--slider {
+			position: absolute;
+			top: 0; left: 0;
+			min-height: 100%;
+			min-width: 40%;
+
 		}
 	}
 	&--monocolour {
@@ -275,4 +286,92 @@ body {
 		font-size: 20px;
 		padding: 30px 0 10px;
 	}
+	&__slider {
+		width: 100%;
+		margin-bottom: 30px;
+		background: #333;
+		position: relative;
+		height: 285px;
+		&-review {
+			position: absolute;
+			top: 0; left: 445px;
+			padding: 50px 60px;
+		}
+		&-subtitle {
+			text-transform: uppercase;
+			font-size: 20px;
+			margin-bottom: 35px;
+		}
+		&-text {
+			max-height: 125px;
+			overflow: hidden;
+			margin: 0;
+		}
+		&-arrows {
+			margin-bottom: 120px;
+			float: right;
+		}
+		&-arrow {
+			display: inline-block;
+			width: 80px;
+			height: 60px;
+			border: 2px #fff solid;
+			padding: 15px 35px;
+			margin-left: 15px;
+			transition: all .25s ease;
+			background: #2a2b2c;
+				&:hover,
+				&:active,
+				&:focus {
+					background: #5474fd;
+				}
+		}
+	}
+}
+
+.fa {
+	color: #fff;
+	transition: all .25s ease;
+	&:hover,
+	&:active,
+	&:focus {
+		color: #5474fd;
+	}
+}
+.fa-linkedin,
+.fa-quote-left {
+	color: #5474fd;
+}
+.fa-quote-left {
+	display: inline-block;
+	font-size: 25px;
+	margin-right: 10px;
+	vertical-align: super;
+}
+
+.footer {
+	padding-top: 120px;
+	padding-bottom: 50px;
+	background: #232323;
+	text-align: center;
+	&__logo {
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+	&__socials {
+		display: block;
+		padding: 0;
+	}
+	&__social {
+		display: inline-block;
+		margin: 0 10px;
+	}
+
 }
