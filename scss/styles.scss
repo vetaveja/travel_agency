@@ -1,0 +1,278 @@
+@import './node_modules/normalize.scss/normalize';
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+@font-face {
+	font-family: 'Aleo';
+	src: url(../fonts/aleo-regular-webfont.eot);
+	src: url(../fonts/aleo-regular-webfont.eot) format('embedded-opentype'),
+		url(../fonts/aleo-regular.otf) format("otf"),
+		url(../fonts/aleo-regular-webfont.ttf) format("ttf"),
+		url(../fonts/aleo-regular-webfont.woff) format("woff"),
+		url(../fonts/aleo-regular-webfont.woff2) format("woff2");
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	color:  #fff;
+	font: 400 14px/1.4 'Josefin Sans', Arial, sans-serif;
+}
+
+.container {
+	width: 1110px;
+	margin: 0 auto;
+	position: relative;
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.header {
+	height: 100vh;
+	background-repeat: no-repeat;
+	position: relative;
+	&__title {
+		margin: 0 auto;
+		padding-top: 270px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 48px;
+		text-align: center;
+		letter-spacing: 2px;
+	}
+	&__subtitle {
+		font-size: 22px;
+		text-align: center;
+		letter-spacing: 5px;
+	}
+	&__search {
+		width: 650px;
+		height: 60px;
+		margin: 55px 230px;
+
+		&-group {
+			padding: 0;
+			margin: 0;
+			border: none;
+			font-size: 0;
+		}
+		&-input,
+		&-btn {
+			display: inline-block;
+			vertical-align: top;
+		}
+		&-input {
+			padding: 20px 125px;
+			border: none;
+			letter-spacing: 1.5px;
+			color: #999;
+			width: 77%;
+			height: 60px;
+			font-size: 14px;
+			outline: none;
+			transition: all .25s ease;
+			&:focus,
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		&-btn {
+			width: 23%;
+			height: 60px;
+			padding: 20px 50px 20px 35px;
+			background-color: #5474fd;
+			border: 2px solid #fff;
+			text-transform: uppercase;
+			font: 14px/1.4 'Aleo', Arial, sans-serif;
+			letter-spacing: 1.5px;
+			outline: none;
+			transition: all .25s ease;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 20px; left: 110px;
+				width: 20px;
+   				height: 20px;
+   				background: url(../img/serchico.png);
+			}
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #496bfe;
+				opacity: 0.8;
+			}
+		}
+	}
+	&__scroll {
+		text-align: center;
+		letter-spacing: 1.5px;
+		margin-top: 120px;
+		position: relative;
+	}
+	&__anchor {
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 15px;
+   		height: 9px;
+	}
+	&__nav {
+		height: 80px;
+		width: 100%;
+		background: #5474fd;
+		position: absolute;
+		bottom: 0;
+		text-transform: uppercase;
+		&-section {
+			font-size: 0;
+			position: relative;
+		}
+		&-logo {
+			display: inline-block;
+			font-weight: 700;
+			font-size: 24px;
+			letter-spacing: 1.5px;
+			margin-top: 30px;
+		}
+		&-menu {
+			position: absolute;
+			right: 0;
+			top: 35px;
+		}
+		&-item {
+			display: inline-block;
+		}
+		&-link {
+			text-decoration: none;
+			color: #fff;
+			margin-left: 80px;
+			font: 14px/1.4 'Aleo', Arial, sans-serif;
+			border: 2px solid #5474fd;
+			transition: all .25s ease;
+			&:active,
+			&:focus,
+			&:hover {
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+.text-container {
+	width: 540px;
+	padding-bottom: 100px;
+	&__bg {
+		background: rgba(35, 35, 35, 0.9);
+		float: left;
+		margin-top: 230px;
+		margin-bottom: 100px;
+		padding: 50px 30px 20px;
+		&--right {
+			float: right;
+		}
+	}
+}
+
+.section{
+	background-size: cover;
+	&__title {
+		font: 36px/1.4 'Aleo', Arial, sans-serif;
+		margin: 0;
+		padding: 205px 0 40px;
+		&--mid {
+
+		}
+	}
+	&__text {
+		font-size: 16px;
+		margin: 0;
+		padding: 20px 0;
+
+	}
+	&__btn {
+		margin: 30px 0;
+		height: 60px;
+		width: 225px;
+		text-transform: uppercase;
+		border: none;
+		outline: none;
+		font: 16px/1.4 'Aleo', Arial, sans-serif;
+		background-image: linear-gradient(45deg, #496bfe 40%, #5474fd 40%);
+		transition: all .25s ease;
+		&:active,
+		&:focus,
+		&:hover {
+			background-image: linear-gradient(#496bfe);
+			opacity: 0.8;
+		}
+	}
+	&__img {
+		max-width: 350px;
+		max-height: 220px;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 345px;
+		&--mid {
+			right: 125px;
+			top: 120px;
+		}
+	}
+	&--monocolour {
+		background: #333;
+		height: 340px;
+		position: relative;
+	}
+	&__icons {
+		font-size: 0;
+	}
+	&__dots {
+		position: absolute;
+		top: 45px;
+		left: 170px;
+	}
+	&__icon {
+		position: absolute;
+		top: 80px; left: 125px;
+		&--select{
+			left: 505px;
+		}
+		&--book {
+			left: 885px;
+		}
+		&-description {
+			position: absolute;
+			top: 190px; left: 75px;
+			font: 36px/1.4 'Aleo', Arial, sans-serif;
+			&--select{
+				left: 460px;
+			}
+			&--book {
+				left: 830px;
+			}
+		}
+	}
+	&__country {
+		font-size: 20px;
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: 20px;
+		padding: 30px 0 10px;
+	}
+}
