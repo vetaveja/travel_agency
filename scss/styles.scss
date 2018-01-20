@@ -162,10 +162,11 @@ body {
 		&-link {
 			text-decoration: none;
 			color: #fff;
-			margin-left: 80px;
+			margin-left: 30px;
 			font: 14px/1.4 'Aleo', Arial, sans-serif;
 			border: 2px solid #5474fd;
 			transition: all .25s ease;
+			padding: 10px 0;
 			&:active,
 			&:focus,
 			&:hover {
@@ -208,6 +209,7 @@ body {
 
 	}
 	&__btn {
+		padding: 0;
 		margin: 30px 0;
 		height: 60px;
 		width: 225px;
